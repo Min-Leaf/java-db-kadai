@@ -27,8 +27,9 @@ public class Employees_Chapter04 {
 		try (Connection con = DriverManager.getConnection(URL, USER_NAME, PASSWORD);
 				Statement statement = con.createStatement()) {
 
-			//　SQL文を実行（DBMSに送信）
+			// SQL文を実行（DBMSに送信）
 			int rowCnt = statement.executeUpdate(sql);
+			System.out.println("データベース接続成功：http://localhost:8888/phpMyAdmin5/index.php?route=/database/structure&server=1&db=java_db&table=");
 			System.out.println("テーブルを作成:rowCnt=" + rowCnt);
 		} catch (SQLException e) {
 			System.out.println("データベース接続失敗：" + e.getMessage());
